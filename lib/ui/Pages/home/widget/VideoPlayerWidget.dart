@@ -6,9 +6,8 @@ import 'package:nativeplayer/core/player/VideoPlayerManager.dart';
 import 'package:nativeplayer/models/camera.dart';
 
 class VideoPlayerWidget extends StatelessWidget {
-  final List<Camera> cameras;
-
-  const VideoPlayerWidget({Key? key, required this.cameras}) : super(key: key);
+  final Camera camera;
+  const VideoPlayerWidget({Key? key, required this.camera}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +19,20 @@ class VideoPlayerWidget extends StatelessWidget {
             viewType: 'video_player_view',
             onPlatformViewCreated: (id) {
               // Configurar visualização no iOS
+              final uiKitViewController = controller as UiKitViewController;
+
+              // Iniciar a reprodução de vídeo
             },
           );
         } else if (Platform.isAndroid) {
-          return const AndroidView(
+          return AndroidView(
             viewType: 'video_player_view',
+            onPlatformViewCreated: (id) {
+              // Configurar visualização no Android
+              final androidViewController = controller as AndroidViewController;
+
+              // Exemplo: Definir a URL do vídeo
+            },
           );
         } else {
           // Lógica para outras plataformas
@@ -36,7 +44,7 @@ class VideoPlayerWidget extends StatelessWidget {
 
         videoPlayerManager.initialize();
 
-        videoPlayerManager.playVideo(cameras);
+        videoPlayerManager.playVideo(camera.url);
 
         videoPlayerManager.reziseAspect("16 / 9");
 
