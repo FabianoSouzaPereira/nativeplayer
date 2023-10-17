@@ -46,7 +46,7 @@ class VideoPlayerWidget extends StatelessWidget {
 
         videoPlayerManager.playVideo(camera.url);
 
-        videoPlayerManager.reziseAspect("16 / 9");
+        videoPlayerManager.reziseAspectVideo("16 / 9");
 
         videoPlayerManager.nativePlayerDispose();
 

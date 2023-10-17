@@ -19,7 +19,6 @@
 		C71DDA3E2ADC8E70008D407A /* NativeVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71DDA3C2ADC8E70008D407A /* NativeVideoPlayer.swift */; };
 		C71DDA3F2ADC8E70008D407A /* VideoPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71DDA3D2ADC8E70008D407A /* VideoPlayerManager.swift */; };
 		C71DDA432ADC9126008D407A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71DDA422ADC9126008D407A /* Camera.swift */; };
-		C7886E222ADCCBD4009C83CC /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7886E212ADCCBD4009C83CC /* VideoPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +70,6 @@
 		C71DDA3C2ADC8E70008D407A /* NativeVideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeVideoPlayer.swift; sourceTree = "<group>"; };
 		C71DDA3D2ADC8E70008D407A /* VideoPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerManager.swift; sourceTree = "<group>"; };
 		C71DDA422ADC9126008D407A /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
-		C7886E212ADCCBD4009C83CC /* VideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		DE20D4B1FE83142378E39ED0 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,7 +175,6 @@
 		C71DDA3B2ADC8E70008D407A /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				C7886E212ADCCBD4009C83CC /* VideoPlayerView.swift */,
 				C71DDA3C2ADC8E70008D407A /* NativeVideoPlayer.swift */,
 				C71DDA3D2ADC8E70008D407A /* VideoPlayerManager.swift */,
 			);
@@ -416,7 +413,6 @@
 				C71DDA3E2ADC8E70008D407A /* NativeVideoPlayer.swift in Sources */,
 				C71DDA3F2ADC8E70008D407A /* VideoPlayerManager.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
-				C7886E222ADCCBD4009C83CC /* VideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

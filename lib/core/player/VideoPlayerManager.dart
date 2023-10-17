@@ -22,14 +22,14 @@ class VideoPlayerManager {
   }
 
   isBuffering() {
-    _methodChannel.invokeListMethod("isBuffering");
+    _methodChannel.invokeMethod("isBuffering");
   }
 
-  void reziseAspect(String aspectRatio) {
+  void reziseAspectVideo(String aspectRatio) {
     _methodChannel.invokeMethod("resizeVideo", {"aspectRatio": aspectRatio});
   }
 
   void nativePlayerDispose() {
-    _methodChannel.invokeListMethod("nativePlayerDispose");
+    _methodChannel.invokeMethod("nativePlayerDispose");
   }
 }

@@ -8,6 +8,7 @@ class NativeVideoPlayer {
     static var Buffering = false;
 
     private var playerViewController: AVPlayerViewController?
+    private var player: AVPlayer?
 
     private init() {
         // Inicialize a instância do player se necessário
@@ -31,8 +32,12 @@ class NativeVideoPlayer {
     }
     
     //The video stops instantly and the playback position resets to the beginning.
-    func stopVideo(){
+    func stopVideo() {
         playerViewController?.player?.setRate(0.0, time: .zero, atHostTime: .zero)
+    }
+
+    func seekVideo(to time: TimeInterval, completionHandler: ((Bool) -> Swift.Void)? = nil) {
+        // todo implementation
     }
 
     func isBuffering(){

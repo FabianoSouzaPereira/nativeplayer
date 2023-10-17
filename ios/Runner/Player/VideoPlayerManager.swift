@@ -39,19 +39,38 @@ class VideoPlayerManager {
 
                 NativeVideoPlayer.shared.stopVideo()
             
+            } else if call.method == "seekVideo" {
+                if let argumentsJson = call.arguments as? String {
+                    let argumentData = argumentsJson.data(using: .utf8)!
+                    let decoder = JSONDecoder()
+                    do {
+                        if let time = try? decoder.decode(Double.self, from: argumentData){
+                            NativeVideoPlayer.shared.seekVideo(to: time, completionHandler: ((Bool) -> Swift.Void)?.none)
+                        }
+                    }
+                }
+                
             } else if call.method == "isBuffering" {
                 
                 NativeVideoPlayer.shared.isBuffering()
 
-            } else if call.method == "reziseAspectVideo" {
+            } else if call.method == "resiseAspectVideo" {
+                if let argumentsJson = call.arguments as? String {
+                    let argumentData = argumentsJson.data(using: .utf8)!
+                    let decoder = JSONDecoder()
+                    do {
+                        if let aspectRatio = try? decoder.decode(String.self, from: argumentData){
+                            NativeVideoPlayer.shared.reziseAspectVideo(aspectRatio: AVLayerVideoGravity(rawValue: aspectRatio) )
+                        }
+                    }
+                }
                 
-                NativeVideoPlayer.shared.reziseAspect(aspectRatio: aspectRatio)
 
             } else if call.method == "nativePlayerDispose" {
 
                 NativeVideoPlayer.shared.nativePlayerDispose()
 
-            }
+            } 
             
 
             // Envie uma resposta para o Flutter se necessário
